@@ -507,12 +507,12 @@ def load_embeddings(fp):
     if fp is not None and hasattr(model, "embedding_manager"):
         model.embedding_manager.load(fp.name)
 
-
 def get_font(fontsize):
+    # fonts = ["arial.ttf", "DejaVuSans.ttf", "/nix/store/p1gap9j58vih5g34iyzf5knwbw8kwkif-dejavu-fonts-minimal-2.37/share/fonts/truetype/DejaVuSans.ttf"]
     fonts = ["arial.ttf", "DejaVuSans.ttf"]
     for font_name in fonts:
         try:
-            return ImageFont.truetype(font_name, fontsize)
+            return ImageFont.truetype("data/" + font_name, fontsize)
         except OSError:
            pass
 
