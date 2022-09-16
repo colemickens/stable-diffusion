@@ -1,4 +1,5 @@
 venv/
+outputs/
 # OS-generated
 # ------------
 .DS_Store*
